@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./user.css">
+</head>
+<body>
+   
+  <div class="container">
+    <h1>Login To Coding Market</h1>
+   
+    <div class="content">
+    
+      <div class="email">
+        <p>Email or Username</p>
+        <input type="text" placeholder="Username" id="name" min="4" required>
+    </div>
+    
+    <div class="password">
+        <p>Password</p>
+        <input type="password" placeholder="Password" id="pass" min="6" max="12" required>
+    </div>
+    
+    <p id="alert">Incorrect username or password. Please try again</p>
+    <button onclick="func()">LOGIN </button>
+</div>
+</div>
+
+
+<script>
+    function func(){
+        var us=document.getElementById("name").value;
+        var ps=document.getElementById("pass").value;
+        if(us=="")
+            document.getElementById('alert').style.display='block';
+        if(ps=="")
+            document.getElementById("alert").style.display='block';
+        if(us.length<4)
+            document.getElementById("alert").style.display='block';
+        if(ps.length<6 || ps.length>12) 
+            document.getElementById("alert").style.display='block';
+        }
+</script>
+</body>
+</html>
